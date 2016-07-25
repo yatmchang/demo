@@ -1,2 +1,51 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-default {
+  background-color: #f0f8ff ;
+  border: 0px solid transparent;
+  padding: 10px;
+//   display: inline-block;
+//   float: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  margin-top: 7px;
+  padding-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+  color: black;
+  font-size: 40;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: black;
+  font-size: 40;
+  // font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  color: black;
+  font-size: 40;
+  // font-weight: bold;
+}
+
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+}
