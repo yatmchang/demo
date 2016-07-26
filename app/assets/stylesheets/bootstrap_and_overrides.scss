@@ -1,10 +1,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    font-style: Monaco;
+    color: #9a8d72;
+}
+
+.navbar-toggle {
+    z-index:3;
+}
+
 .navbar-default {
-  background-color: #f0f8ff ;
+  background-color: #f9f2ec ;
   border: 0px solid transparent;
   padding: 10px;
+  // font-family: "Moon.otf";
 //   display: inline-block;
 //   float: none;
 }
@@ -48,4 +68,8 @@
 .dropdown.open .dropdown-menu {
     max-height: 300px;
     opacity: 1;
+}
+
+.navbar-inner {
+  text-align:center;
 }

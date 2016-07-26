@@ -1,0 +1,10 @@
+<div class="container">
+<%= simple_form_for @snap do |f| %>
+  <%= f.input :title, :label => "Title", placeholder: "Optional" %>
+  <%= f.file_field :picture, :label => "Snap" %>
+  <br>
+  <%= f.input :description, placeholder: "Description", placeholder: "Optional (What's the occasion? What's your build like?)" %>
+  <%= f.input :price, :label => "Price", placeholder: "Optional"  %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+</div>

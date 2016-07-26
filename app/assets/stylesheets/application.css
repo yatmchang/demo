@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require font-awesome
+ *= require jquery.jcrop
  *= require_tree .
  *= require_self
  */
@@ -21,6 +22,7 @@
  body{
     padding-top: 85px;
     height: 100%;
+    background: #f7f7f7
  }
 
  #wrap {
@@ -37,13 +39,16 @@
     text-align: center;
     position: relative;
     width: 100%;
-    background: #f0f8ff;
+    background: #f9f2ec;
     color: #fff;
     overflow: hidden;
-    margin-top: -150px;
-    height: 150px;
+    margin-top: -75px;
+    height: 75px;
     clear:both;
     padding-top:20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
  }
 
  footer a {
@@ -70,4 +75,19 @@
   height: 15px;
   text-align: center;
   padding-top: 15px;
+}
+
+span.glyphicon-camera {
+    font-size: 1.8em;
+    margin-top: 0px;
+}
+
+span.fa-user{
+  font-size: 1.8em;
+  margin-top: 0px;
+}
+
+@font-face {
+  font-family: 'Moon';
+  src: url('/assets/Moon-Bold.otf');
 }

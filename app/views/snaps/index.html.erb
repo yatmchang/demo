@@ -1,7 +1,9 @@
-<div class="row">
-  <div class="col-md-6">
+<div class="container">
+  <% @snaps.each do |snap| %>
+  <div id="user" class="col-md-3 text-center ">
+    <div id="user-image">
+      <%= link_to image_tag(snap.picture, class: "img-rounded img-responsive snap-pic"), snap_path(snap) %><br>
+    </div>
   </div>
-  <div class="col-md-6">
-    <%= link_to "Post a new Snap", new_snap_path %>
-  </div>
+<% end %>
 </div>
