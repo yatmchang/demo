@@ -1,9 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+  <div class="col-md-4">
 <h1> Sign In </h1>
 
 <%= form_tag sessions_path do %>
   <div class="form-group">
       <%= label_tag :username %>
-      <%= email_field_tag :username, "", class: "form-control"%>
+      <%= text_field_tag :username, "", class: "form-control"%>
   </div>
   <div class="form-group">
     <%= label_tag :password %>
@@ -11,3 +16,6 @@
   </div>
     <%= submit_tag "Sign In", class: "btn btn-primary" %>
 <% end %>
+</div>
+</div>
+</div>

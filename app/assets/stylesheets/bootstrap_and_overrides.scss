@@ -1,2 +1,80 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+    margin-top: 5px;
+    font-size: 40px;
+    // font-weight: light;
+    font-family: 'Moon';
+    // font-style: Monaco;
+    color: #9a8d72;
+}
+
+.navbar-toggle {
+    z-index:3;
+}
+
+.navbar-default {
+  background-color: #f9f2ec ;
+  border: 0px solid transparent;
+  padding: 10px;
+  // font-family: "Moon.otf";
+//   display: inline-block;
+//   float: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  margin-top: 7px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  font-family: 'Moon';
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+  color: black;
+  font-size: 12px;
+  font-family: 'Moon';
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: black;
+  font-size: 12px;
+  font-family: 'Moon';
+  // font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  color: black;
+  font-size: 12px;
+  font-family: 'Moon';
+  // font-weight: bold;
+}
+
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.navbar-inner {
+  text-align:center;
+}

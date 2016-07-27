@@ -4,33 +4,54 @@
   <title>Demo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- <script type="text/javascript" src="../../assets/javascripts/wookmark.min.js"></script> -->
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container-fluid">
-  <nav class="navbar navbar">
-    <div class="navbar-header">
-      <div class="navbar-brand"><%= link_to "Home", root_path %></div>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Feature 1</a></li>
-      <li><a href="#">Feature 2</a></li>
-      <li><a href="#">Feature 3</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <% if user_signed_in? %>
-      <li><span id='navbarname'>Hello, <%= current_user.username %></span></li>
-      <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
-      <% else %>
-      <li><%= link_to "Sign Up", new_user_path %></li>
-      <li><%= link_to "Sign In", new_session_path %></li>
-      <% end %>
-      <li>
-    </ul>
-  </nav>
-<hr>
-<%= yield %>
+  <div class"container">
+    <%= render "/layouts/navbar" %>
+  </div>
+  <div class="container">
+    <% if flash[:notice] %>
+    <div id="flash-notice"><%= flash[:notice] %></div>
+    <% elsif flash[:alert] %>
+    <div id="flash-alert"><%= flash[:alert] %></div>
+    <% end %>
+  </div>
+  <div id="wrap">
+  <%= yield %>
 </div>
+  <div class="row">
+  </div>
+  <br>
+  <br>
 
+
+  <footer>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <ul><%= link_to "", root_path %></ul>
+        <ul><%= link_to "", root_path %></ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li><a href="" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+          </li>
+          <li><a href="" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+          </li>
+          <li><a href="" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+
+        </ul>
+      </div>
+      <div class="col-md-12">
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
