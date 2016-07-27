@@ -5,6 +5,6 @@
 <p><%= @snap.description %></p>
 <p><%= @snap.price %> </p>
 <%= link_to "Delete", snap_path(@snap),
-                        method: :delete
+                        method: :delete,
                         data: {confirm: "Are you sure?"}%>
 </div>
