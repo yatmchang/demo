@@ -16,10 +16,13 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'bootstrap-glyphicons'
 gem "font-awesome-rails"
+gem 'carrierwave-crop'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry'
+  gem 'pry-rails'
 end
 
 group :development do
