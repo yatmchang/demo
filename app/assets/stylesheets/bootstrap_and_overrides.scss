@@ -9,10 +9,10 @@
     text-align: center;
     margin:0 auto;
     margin-top: 5px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: monospace;
-    font-style: Monaco;
+    font-size: 40px;
+    // font-weight: light;
+    font-family: 'Moon';
+    // font-style: Monaco;
     color: #9a8d72;
 }
 
@@ -32,22 +32,27 @@
 .navbar-default .navbar-nav > li > a {
   margin-top: 7px;
   padding-bottom: 0px;
+  font-size: 12px;
+  font-family: 'Moon';
 }
 
 .navbar-default .navbar-nav > li > a:focus {
   color: black;
-  font-size: 40;
+  font-size: 12px;
+  font-family: 'Moon';
 }
 
 .navbar-default .navbar-nav > li > a:hover {
   color: black;
-  font-size: 40;
+  font-size: 12px;
+  font-family: 'Moon';
   // font-weight: bold;
 }
 
 .navbar-default .navbar-nav > li > a:active {
   color: black;
-  font-size: 40;
+  font-size: 12px;
+  font-family: 'Moon';
   // font-weight: bold;
 }
 
