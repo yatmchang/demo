@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     delete :destroy, on: :collection
   end
   resources :snaps, only: [:new, :create, :destroy, :show, :index]
+  resources :questions, only: [:new, :create, :destroy, :show, :index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -9,11 +9,32 @@
     text-align: center;
     margin:0 auto;
     margin-top: 5px;
-    font-size: 40px;
-    // font-weight: light;
-    font-family: 'Moon';
-    // font-style: Monaco;
-    color: #9a8d72;
+
+}
+.navbar-brand > a {
+  font-size: 40px;
+  font-family: 'Moon';
+  color: #9a8d72;
+  text-decoration: none;
+}
+
+.navbar-brand > a:hover {
+  font-size: 40px;
+  font-family: 'Moon';
+  color: #96896f;
+  text-decoration: none;
+}
+.navbar-brand > a:focus {
+  font-size: 40px;
+  font-family: 'Moon';
+  color: #9a8d72;
+  text-decoration: none;
+}
+.navbar-brand > a:active {
+  font-size: 40px;
+  font-family: 'Moon';
+  color: #96896f;
+  text-decoration: none;
 }
 
 .navbar-toggle {
