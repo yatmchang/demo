@@ -16,15 +16,8 @@
 //= require jquery.jcrop
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require_self
+//= require react
 //= require react-server
 //= require react_ujs
-//= require components
+//= require_self
 //= require_tree .
-
-
-window.$ = window.jQuery = global.$ = require('jquery');
-var React = window.React = global.React = require('react');
-require( 'jquery-ujs' );
-require( 'fetch' );
-require( './components' );

@@ -1,12 +1,9 @@
-<!-- <div class="container"> -->
-  <%# @snaps.each do |snap| %>
-  <!-- <div class="col-md-3 text-center snap-views"> -->
-      <!-- <%#= link_to image_tag(snap.picture, class: "img-rounded img-responsive snap-pic"), snap_path(snap) %><br> -->
-      <!-- <div id="snap-text"> -->
-        <!-- <h5><%#= snap.title if snap.title%></h5> -->
-      <!-- </div> -->
-  <!-- </div> -->
-<%#end %>
-<!-- </div> -->
-<%= react_component 'App', { snaps: @snaps } %>
-<%#= react_component('App', {snaps: @snaps}, prerender: true) %>
+<div id="masonry">
+  <% @snaps.each do |snap| %>
+      <%= link_to image_tag(snap.picture), snap_path(snap) %>
+  <%end %>
+</div>
+
+<!-- img-responsive -->
+<!-- snap-views -->
+<!-- snap-pic  -->

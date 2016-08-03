@@ -12,5 +12,5 @@
 !/log/.keep
 /tmp
 
-/images
+/app/assets/images
 /node_modules
