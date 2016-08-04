@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #columns {
-	column-width: 320px;
+	column-width: 310px;
 	column-gap: 8px;
   width: 95%;
 	max-width: 1100px;
@@ -36,4 +36,8 @@ div#columns:hover figure:not(:hover) {
 @media screen and (max-width: 750px) {
   #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
+}
+
+.pictureshow img {
+  width: 300px;
 }

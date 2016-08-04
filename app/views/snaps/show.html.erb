@@ -1,6 +1,6 @@
 <div class="container">
 <h1><%= @snap.title.titleize if @snap.title%></h1>
-<p><%= image_tag(@snap.picture.medium)%></p>
+<p class='pictureshow'><%= image_tag(@snap.picture)%></p>
 <hr>
 <p><%= @snap.description if @snap.description%></p>
 <p><%= @snap.price if @snap.price%>  </p>
