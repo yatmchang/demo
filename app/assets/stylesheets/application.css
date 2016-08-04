@@ -27,19 +27,12 @@
  }
 
  body{
-    padding-top: 85px;
+    padding-top: 65px;
+    margin-bottom: 75px;
     height: 100%;
     background: #fcfcfc
  }
 
- #wrap {
-   min-height: 100%;
- }
-
- #main {
-   overflow:auto;
-   padding-bottom:150px; /* this needs to be bigger than footer height*/
- }
 
  footer {
     padding: 0px 0;

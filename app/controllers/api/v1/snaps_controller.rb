@@ -13,13 +13,8 @@ class Api::V1::SnapsController < ApplicationController
     respond_to do |format|
       @snap.save
       # byebug
-      format.json {render :json => @post, status: :created}
-
-    # if @snap.save
-    #   redirect_to snap_path(@snap), notice: "Changes Saved!"
-    # else
-    #   redirect_to new_snap_path(current_user), alert: "Unable To Save"
-    # end
+      format.json {render :json}
+      #  => @post, status: :created
     end
   end
 

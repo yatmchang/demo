@@ -1,9 +1,7 @@
-<div id="masonry">
-  <% @snaps.each do |snap| %>
-      <%= link_to image_tag(snap.picture), snap_path(snap) %>
-  <%end %>
+<div id="columns">
+    <% @snaps.each do |snap| %>
+    <figure>
+        <%= link_to image_tag(snap.picture), snap_path(snap) %>
+      </figure>
+    <%end %>
 </div>
-
-<!-- img-responsive -->
-<!-- snap-views -->
-<!-- snap-pic  -->

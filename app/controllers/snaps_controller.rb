@@ -20,6 +20,10 @@ class SnapsController < ApplicationController
 
   def index
     @snaps = Snap.order(created_at: :desc)
+    respond_to do |format|
+      format.html
+      format.json { render json: @snaps }
+    end
   end
 
   def destroy
