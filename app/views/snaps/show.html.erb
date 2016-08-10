@@ -1,10 +1,32 @@
 <div class="container">
-<h1><%= @snap.title.titleize if @snap.title%></h1>
-<p class='pictureshow'><%= image_tag(@snap.picture)%></p>
-<hr>
-<p><%= @snap.description if @snap.description%></p>
-<p><%= @snap.price if @snap.price%>  </p>
-<%= link_to "Delete", snap_path(@snap),
-                        method: :delete,
-                        data: {confirm: "Are you sure?"}%>
+  <div class="row">
+
+    <br>
+  </div>
+  <div class="col-md-4">
+    DISLIKE: <%= @snap.dislike_count %>
+    <%= link_to "DISLIKE", dislike_snap_path(@snap), method: :post %>
+  </div>
+
+  <div class="col-md-4">
+    <p class='pictureshow'><%= image_tag(@snap.picture)%></p>
+    <div class="col-md-4">
+      <%= link_to fa_icon("heart-o"), root_path, class:"showpageicons" %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to fa_icon("frown-o"), root_path, class:"showpageicons" %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to fa_icon("trash" ), snap_path(@snap),
+                            method: :delete,
+                            data: {confirm: "Are you sure?"},
+                            class:"showpageicons"%>
+    </div>
+  </div>
+  <div class="col-md-4">
+    LIKE: <%= @snap.like_count %>
+    <%= link_to "LIKE", like_snap_path(@snap), method: :post %>
+  </div>
+</div>
+<div class="footerhelp" >
 </div>

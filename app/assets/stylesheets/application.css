@@ -91,3 +91,7 @@ span.fa-user{
   font-family: 'Moon';
   src: url('/assets/Moon-Bold.otf');
 }
+
+.footerhelp {
+  height:50px;
+}

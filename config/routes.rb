@@ -5,12 +5,18 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create] do
     delete :destroy, on: :collection
   end
-  resources :snaps, only: [:new, :create, :destroy, :show, :index]
+  resources :snaps, only: [:new, :create, :destroy, :show, :index] do
+    post :like, on: :member
+    post :dislike, on: :member
+  end
   resources :questions, only: [:new, :create, :destroy, :show, :index]
 
   namespace :api, defaults: {format: :json} do
     namespace :v1 do
-      resources :snaps, only: [:new, :create, :index, :show]
+      resources :snaps, only: [:new, :create, :index, :show] do
+        post :like, on: :member
+        post :dislike, on: :member
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

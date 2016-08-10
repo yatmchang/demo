@@ -11,10 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727201244) do
+ActiveRecord::Schema.define(version: 20160810002328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "snap_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["snap_id"], name: "index_comments_on_snap_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+
+  create_table "dislikes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "snap_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "dislikes", ["snap_id"], name: "index_dislikes_on_snap_id", using: :btree
+  add_index "dislikes", ["user_id"], name: "index_dislikes_on_user_id", using: :btree
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "snap_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "likes", ["snap_id"], name: "index_likes_on_snap_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -43,8 +74,10 @@ ActiveRecord::Schema.define(version: 20160727201244) do
     t.text     "description"
     t.string   "price"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "like_count"
+    t.integer  "dislike_count"
   end
 
   add_index "snaps", ["user_id"], name: "index_snaps_on_user_id", using: :btree
@@ -59,6 +92,12 @@ ActiveRecord::Schema.define(version: 20160727201244) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "comments", "snaps"
+  add_foreign_key "comments", "users"
+  add_foreign_key "dislikes", "snaps"
+  add_foreign_key "dislikes", "users"
+  add_foreign_key "likes", "snaps"
+  add_foreign_key "likes", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "questions", "users"
   add_foreign_key "snaps", "users"

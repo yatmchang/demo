@@ -1,5 +1,5 @@
 class SnapsController < ApplicationController
-  before_action :find_snap, only: [:show, :destroy]
+  before_action :find_snap, only: [:show, :destroy, :like, :dislike]
   # before_action :authenticate_user!, except: [:index, :show]
 
   def new
@@ -16,6 +16,11 @@ class SnapsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @snap }
+      format.xml  { render xml:  @snap }
+    end
   end
 
   def index
@@ -29,6 +34,26 @@ class SnapsController < ApplicationController
   def destroy
     @snap.destroy
     redirect_to snaps_path, notice: "Snap deleted"
+  end
+
+  def like
+    if @snap.like_count == nil
+      @snap.like_count = 1
+    else
+      @snap.like_count += 1
+    end
+    @snap.save
+    redirect_to snap_path(@snap), notice: "Changes Saved!"
+  end
+
+  def dislike
+    if @snap.dislike_count == nil
+      @snap.dislike_count = 1
+    else
+      @snap.dislike_count += 1
+    end
+    @snap.save
+    redirect_to snap_path(@snap), notice: "Changes Saved!"
   end
 
 private

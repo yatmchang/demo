@@ -1,5 +1,5 @@
 class Api::V1::SnapsController < ApplicationController
-  before_action :find_snap, only: [:show, :destroy]
+  before_action :find_snap, only: [:show, :destroy, :like, :dislike]
   skip_before_filter :verify_authenticity_token
   # before_action :authenticate_user!, except: [:index, :show]
 
@@ -9,16 +9,19 @@ class Api::V1::SnapsController < ApplicationController
 
   def create
     @snap = Snap.new snap_params
-
+    @snap.save
     respond_to do |format|
-      @snap.save
-      # byebug
       format.json {render :json}
       #  => @post, status: :created
     end
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @snap }
+      format.xml  { render xml:  @snap }
+    end
   end
 
   def index
@@ -33,6 +36,33 @@ class Api::V1::SnapsController < ApplicationController
   def destroy
     @snap.destroy
     redirect_to snaps_path, notice: "Snap deleted"
+  end
+
+  def like
+    if @snap.like_count == nil
+      @snap.like_count = 1
+    else
+      @snap.like_count += 1
+    end
+    @snap.save
+    respond_to do |format|
+      # format.html
+      format.json {render :json}
+    end
+  end
+
+
+  def dislike
+    if @snap.dislike_count == nil
+      @snap.dislike_count = 1
+    else
+      @snap.dislike_count += 1
+    end
+    @snap.save
+    respond_to do |format|
+      # format.html
+      format.json {render :json}
+    end
   end
 
 private
