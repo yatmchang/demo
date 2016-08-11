@@ -12,13 +12,6 @@
  *
  *= require font-awesome
  *= require jquery.jcrop
- *= require masonry/basic
- *= require masonry/centered
- *= require masonry/fluid
- *= require masonry/gutters
- *= require masonry/infinitescroll
- *= require masonry/right-to-left
- *= require masonry/transitions
  *= require_tree .
  *= require_self
  */
@@ -95,3 +88,13 @@ span.fa-user{
 .footerhelp {
   height:50px;
 }
+
+.logo{
+  width: 35px;
+  margin-top: -14px;
+  padding-right: 0px;
+}
+/*
+.navbartext{
+  font-size: 30px;
+}*/

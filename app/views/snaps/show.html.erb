@@ -4,17 +4,18 @@
     <br>
   </div>
   <div class="col-md-4">
-    DISLIKE: <%= @snap.dislike_count %>
-    <%= link_to "DISLIKE", dislike_snap_path(@snap), method: :post %>
+    <div class='fixingposition'>
+      <%= link_to fa_icon("frown-o"), dislike_snap_path(@snap), method: :post, class:"showpageicons2" %>
+    </div>
+    <div class="disliketext">
+      DISLIKE: <%= @snap.dislike_count %>
+    </div>
   </div>
 
   <div class="col-md-4">
     <p class='pictureshow'><%= image_tag(@snap.picture)%></p>
     <div class="col-md-4">
-      <%= link_to fa_icon("heart-o"), root_path, class:"showpageicons" %>
-    </div>
-    <div class="col-md-4">
-      <%= link_to fa_icon("frown-o"), root_path, class:"showpageicons" %>
+
     </div>
     <div class="col-md-4">
       <%= link_to fa_icon("trash" ), snap_path(@snap),
@@ -22,10 +23,17 @@
                             data: {confirm: "Are you sure?"},
                             class:"showpageicons"%>
     </div>
+    <div class="col-md-4">
+
+    </div>
   </div>
   <div class="col-md-4">
+    <div class='fixingposition'>
+      <%= link_to fa_icon("heart-o"), like_snap_path(@snap), method: :post, class:"showpageicons2" %>
+    </div>
+    <div class="liketext">
     LIKE: <%= @snap.like_count %>
-    <%= link_to "LIKE", like_snap_path(@snap), method: :post %>
+    </div>
   </div>
 </div>
 <div class="footerhelp" >

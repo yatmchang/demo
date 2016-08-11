@@ -18,8 +18,8 @@ gem 'bootstrap-glyphicons'
 gem "font-awesome-rails"
 gem 'carrierwave-crop'
 gem 'react-rails'
-gem 'masonry-rails'
 gem 'carrierwave-base64'
+gem 'chart-js-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

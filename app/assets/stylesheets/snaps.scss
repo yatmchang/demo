@@ -36,6 +36,7 @@ div#columns:hover figure:not(:hover) {
 }
 
 .pictureshow img {
+	border-radius: 5px;
   width: 300px;
   max-height: 500px;
 }
@@ -46,4 +47,30 @@ div#columns:hover figure:not(:hover) {
 }
 .showpageicons:hover {
   color: #96896f;
+}
+
+.showpageicons2 {
+  font-size: 12.8em;
+  color: #3c948b;
+}
+.showpageicons2:hover {
+  color: #3c948b;
+}
+
+.fixingposition {
+	text-align: center;
+}
+
+.liketext {
+	font-size: 25px;
+	font-family: 'Moon';
+	text-align: center;
+	color: #9a8d72;
+}
+
+.disliketext {
+	font-size: 25px;
+	font-family: 'Moon';
+	text-align: center;
+	color: #9a8d72;
 }

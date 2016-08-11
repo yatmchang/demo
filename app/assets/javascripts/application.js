@@ -19,5 +19,6 @@
 //= require react
 //= require react-server
 //= require react_ujs
+//= require Chart
 //= require_self
 //= require_tree .
